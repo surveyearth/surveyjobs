@@ -1,0 +1,85 @@
+@import "compass/css3";
+
+body,html{
+  height: 100%;
+  margin: 0;
+}
+a {color:#fff;-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;}
+a:hover {color:#eee;-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;}
+body { 
+  background: url(https://api.ning.com/files/a4JBf1Z8ExaBrPzEbHJkLyJ-RbFMjC0mESuAbDac4EtEAVuUFddaA*7OyR2w3JAUEtz4cSRSIvVREVT3kwY*tc5g8KL25RQz/IMG_0569.JPG) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ cursor:  crosshair;
+  cursor: url(https://goo.gl/59OMm4) 53 53, crosshair;
+}
+.halvsies{
+  min-height: 100%;
+  height: inherit;
+  overflow: hidden;
+  a,h1{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 4vw;
+    display: inline-block;
+    vertical-align: middle;
+    transition: color 400ms;
+  }
+  article{
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+    }
+    &:after{
+      transition: width 400ms;
+      min-height: 205%;
+    }
+    &:hover{
+      a,h1{
+        color: #212121;
+      }
+      &:after{
+        width: 150%;
+      }
+    }
+  }
+  .lhalf{
+    &:after{
+      content: '';
+      position: absolute;
+      top: -108%;
+      right: 0;
+      bottom: -10%;
+      left: -45%;
+      z-index: -1;
+      transform: rotate(30deg);
+      background: #a12712;
+      width: 0;
+    }
+  }
+  .rhalf{
+    &:after{
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -45%;
+      bottom: -105%;
+      z-index: -1;
+      transform: rotate(30deg);
+      background: #a12712;
+      width: 0;
+    }
+  }
+}
